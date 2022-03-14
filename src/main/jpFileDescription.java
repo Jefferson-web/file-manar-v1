@@ -41,6 +41,11 @@ public class jpFileDescription extends JPanel {
 		tableModel.addRow(new Object[] { "Can Execute", getFile().canExecute() });
 	}
 	
+	public void clearProperties() {
+		tableModel.setRowCount(0);
+		file = null;
+	}
+	
 	public void sendFile(File file){
 		this.file = file;
 		showProperties();
